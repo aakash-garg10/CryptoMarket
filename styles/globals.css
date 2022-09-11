@@ -2,29 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --left-bg-color: rgba(114, 9, 183, 0.7);
+  --right-bg-color: rgba(67, 97, 238, 0.7);
+  --left-btn-hover-color: rgba(247, 37, 133, 0.8);
+  --right-btn-hover-color: rgba(76, 201, 240, 0.8);
+  --hover-width: 75%;
+  --other-width: 25%;
+  --speed: 1000ms;
+}
+#__next{
+  height: 100vh;
+}
 html,
 body {
-  padding: 0;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  overflow: hidden;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
 }
