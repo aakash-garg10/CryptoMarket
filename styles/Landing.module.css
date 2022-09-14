@@ -20,15 +20,7 @@
   box-shadow: 20px -20px 60px #bebebe, -20px 20px 60px #ffffff;
 }
 
-@keyframes ani {
-  0% {
-    background-position: 0%;
-  }
 
-  100% {
-    background-position: 400%;
-  }
-}
 
 .container {
   position: relative;

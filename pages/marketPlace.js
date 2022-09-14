@@ -7,11 +7,12 @@ const marketPlace = () => {
     <div>marketPlace
 
 <h1 className="text-3xl font-bold underline">
-      Hello world!
-      sab mast chal rha
+     THIS IS THE MARKET PLACE WHERE WE WILL SHOW THE CHARTS AND THE COINS OF THE CRYPTO
     </h1>
     </div>
   )
 }
 
 export default marketPlace
+
+
