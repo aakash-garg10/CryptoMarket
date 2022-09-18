@@ -20,8 +20,6 @@
   box-shadow: 20px -20px 60px #bebebe, -20px 20px 60px #ffffff;
 }
 
-
-
 .container {
   position: relative;
   width: 100%;
@@ -72,7 +70,30 @@
 .split.left::before {
   transition: all var(--speed) ease-in-out;
 }
+.logoSection {
+  height: 5rem;
+  position: fixed;
+  display: block;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
 
+}
+
+.logoSection .logoHeading {
+  color: white;
+  font-size: 3.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
 /* .hover-left .left {
   width: var(--hover-width);
 }
@@ -85,7 +106,6 @@
   transition: ease-in-out 1s;
 } */
 
-
 /* .hover-right .right {
   width: var(--hover-width);
 }
@@ -97,7 +117,6 @@
   transition: ease-in-out 1s;
   font-size: 3rem;
 } */
-
 
 /* CHECKING
 .left:hover{

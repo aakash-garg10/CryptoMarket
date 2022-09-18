@@ -34,6 +34,9 @@ export default function Home() {
   return (
     <>
       <div className={`${styles.container}`}>
+        <div className={styles.logoSection}>
+          <h2 className={styles.logoHeading}>CRYPTO EXCHANGER</h2>
+        </div>
         <div
           className={`${styles.split} ${styles.left}`}
           onMouseEnter={leftchangeBackground}
