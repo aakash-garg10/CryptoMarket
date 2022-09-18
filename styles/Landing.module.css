@@ -73,7 +73,7 @@
   transition: all var(--speed) ease-in-out;
 }
 
-.hover-left .left {
+/* .hover-left .left {
   width: var(--hover-width);
 }
 
@@ -83,9 +83,10 @@
 .hover-left .right h1 {
   font-size: 3rem;
   transition: ease-in-out 1s;
-}
+} */
 
-.hover-right .right {
+
+/* .hover-right .right {
   width: var(--hover-width);
 }
 
@@ -95,7 +96,31 @@
 .hover-right .left h1 {
   transition: ease-in-out 1s;
   font-size: 3rem;
+} */
+
+
+/* CHECKING
+.left:hover{
+  width: var(--hover-width);
 }
+.left:hover ~ .right{
+  width: var(--other-width);
+}
+.left:hover ~ .right h1{
+  transition: ease-in-out 1s;
+  font-size: 3rem;
+} */
+
+/* .right:hover{
+  width: var(--hover-width);
+}
+.right:hover .left{
+  width: var(--other-width);
+}
+.right:hover ~ .left h1{
+  transition: ease-in-out 1s;
+  font-size: 3rem;
+} */
 
 @media (max-width: 800px) {
   .btn {

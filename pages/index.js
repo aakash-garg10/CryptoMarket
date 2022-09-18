@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 // import styles from "../styles/Home.module.css";
@@ -5,27 +6,48 @@ import styles from "../styles/Landing.module.css";
 import Link from "next/link";
 
 export default function Home() {
-  // const left = document.querySelector('.left')
-  // const right = document.querySelector('.right')
-  // const container = document.querySelector('.container')
+   function leftchangeBackground(e) {
+    const right = document.querySelector(".Landing_right__XteyY");
+    const headright = document.querySelector(".Landing_right__XteyY h1");
+    const left = document.querySelector(".Landing_left__t2dm2");
+    const headleft = document.querySelector(".Landing_left__t2dm2 h1");
+    const container = document.querySelector(".Landing_container__MoEnB");
 
-  // left.addEventListener('mouseenter', () => container.classList.add('hover-left'))
-  // left.addEventListener('mouseleave', () => container.classList.remove('hover-left'))
+    right.style.width = "25%";
+    left.style.width = "75%";
+    headright.style.fontSize = '3rem';
+    headleft.style.fontSize = '4rem'
+  }
+  function rightchangeBackground(e) {
+    const right = document.querySelector(".Landing_right__XteyY");
+    const headright = document.querySelector(".Landing_right__XteyY h1");
+    const left = document.querySelector(".Landing_left__t2dm2");
+    const headleft = document.querySelector(".Landing_left__t2dm2 h1");
+    const container = document.querySelector(".Landing_container__MoEnB");
 
-  // right.addEventListener('mouseenter', () => container.classList.add('hover-right'))
-  // right.addEventListener('mouseleave', () => container.classList.remove('hover-right'))
-
+    right.style.width = "75%";
+    left.style.width = "25%";
+    headleft.style.fontSize='3rem';
+    headright.style.fontSize='4rem';
+    
+  }
   return (
     <>
-      <div className={styles.container}>
-        <div className={`${styles.split} ${styles.left}`}>
+      <div className={`${styles.container}`}>
+        <div
+          className={`${styles.split} ${styles.left}`}
+          onMouseEnter={leftchangeBackground}
+        >
           <h1>MarketPlace</h1>
-
           <Link href="/marketPlace">
             <button className={styles.btn}>Visit Now</button>
           </Link>
         </div>
-        <div className={`${styles.split} ${styles.right}`}>
+
+        <div
+          className={`${styles.split} ${styles.right}`}
+          onMouseEnter={rightchangeBackground}
+        >
           <h1>Exchange Coin</h1>
           <Link href="/exchangeCoin">
             <button className={styles.btn}>Visit Now</button>
@@ -76,7 +98,7 @@ export default function Home() {
             0% {
               background-position: 0%;
             }
-          
+
             100% {
               background-position: 400%;
             }
