@@ -6,7 +6,7 @@ import btc from "../assets/btc.png"
 import usdt from "../assets/usdt.png"
 import gainers from "../assets/gainers.png"
 import recent from "../assets/recent.png"
-import TrendingCard from "./trendingCard"
+import TrendingCard from "./TrendingCard"
 import ReactSwitch from "react-switch"  //highlight button
 
 const styles = {
@@ -34,12 +34,12 @@ const Trending = () => {
             isIncrement: false,
             rate: "9.32%"
         }, {
-            number: 1,
-            symbol: "BTC",
-            name: "Bitcoin",
+            number: 3,
+            symbol: "mBTC",
+            name: "Mini Bitcoin",
             icon: btc,
             isIncrement: true,
-            rate: "2.34%"
+            rate: "1.94%"
         },
     ]
 
