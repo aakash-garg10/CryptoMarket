@@ -1,7 +1,8 @@
 import RightArrow from "../assets/svg/rightArrow"
 
 const styles = {
-    button: `text-[#6188FF] flex items-center cursor-pointer whitespace-nowrap justify-between`
+    // button: `text-[#6188FF] flex items-center cursor-pointer whitespace-nowrap justify-between`
+    button: `flex items-center cursor-pointer whitespace-nowrap justify-between`
 }
 
 const MoreButton = () => {

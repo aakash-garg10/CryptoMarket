@@ -1,6 +1,7 @@
 import MoreButton from './moreButton'
 import TrendingCardRow from './trendingCardRow'
 import Image from 'next/image'
+import gstyles from '../styles/Glassmorphism.module.css'
 
 const styles = {
   trendingCard: `w-full p-5 py-3 pb-0 bg-[#323546] rounded-xl text-white mr-3`,
@@ -9,7 +10,7 @@ const styles = {
 
 const TrendingCard = ({ icon, title, trendingData }) => {
   return (
-    <div className={styles.trendingCard}>
+    <div className={`${styles.trendingCard} ${gstyles.glassdesign}`}>
       <div className={styles.trendingCardWrapper}>
         <div className='flex'>
           {icon && <Image src={icon} width={27} height={27} alt='' />}
