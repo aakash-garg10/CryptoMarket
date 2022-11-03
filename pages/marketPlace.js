@@ -2,13 +2,14 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Header from '../components/Header'
+import Trending from '../components/Trending'
 
 const marketPlace = () => {
   return (
    <div className="min-h-screen">
     <Header />
     <div className="mt-10"></div>
-    {/* Trending */}
+    <Trending/>
     <div className="mt-20"></div>
     {/* CoinTable */}
    </div>

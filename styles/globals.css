@@ -20,6 +20,9 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
+  background: linear-gradient(to bottom, #212430, #17171a);
+  height: 100%;
+  width: 100vw;
 }
 
 * {
