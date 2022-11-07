@@ -23,7 +23,7 @@ const team = () => {
             <div className={styles.itemTeam}>
               <div className={styles.itemTeamImgBox}>
                 <Image
-                  src="/../public/Aakash.jpg"
+                  src="/Aakash.jpg"
                   alt="Picture of the Developer"
                   width={300}
                   height={370}
@@ -59,7 +59,7 @@ const team = () => {
             <div className={styles.itemTeam}>
               <div className={styles.itemTeamImgBox}>
                 <Image
-                  src="/../public/anant.jpg"
+                  src="/anant.jpg"
                   alt="Picture of the Developer"
                   width={300}
                   height={370}
@@ -95,7 +95,7 @@ const team = () => {
             <div className={styles.itemTeam}>
               <div className={styles.itemTeamImgBox}>
                 <Image
-                  src="/../public/ankit.jpg"
+                  src="/ankit.jpg"
                   alt="Picture of the Developer"
                   width={300}
                   height={370}
@@ -131,7 +131,7 @@ const team = () => {
             <div className={styles.itemTeam}>
               <div className={styles.itemTeamImgBox}>
                 <Image
-                  src="/../public/photo.webp"
+                  src="/photo.webp"
                   alt="Picture of the Developer"
                   width={300}
                   height={370}
