@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+
+.wrapper{
+    position: relative;
+    height: 20%;
+}
+.heading {
+    position: absolute;
+    text-decoration: underline;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    color: hsl(36, 100%, 50%);
+    font-size: 114px;
+    letter-spacing: 8px;
+    cursor: pointer;
+  }
+  
+  .heading::before {
+    content: "OUR TEAM";
+    position: absolute;
+    color: transparent;
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent 0,
+      transparent 2px,
+      white 2px,
+      white 4px
+    );
+    -webkit-background-clip: text;
+    top: 0px;
+    left: 0;
+    z-index: -1;
+    transition: 1s;text-decoration: underline;
+    width: 100%;
+  }
+  
+  .heading::after {
+    content: "OUR TEAM";
+    position: absolute;
+    color: transparent;text-decoration: underline;
+    background-image: repeating-linear-gradient(
+      135deg,
+      transparent 0,
+      transparent 2px,
+      white 2px,
+      white 4px
+    );
+    -webkit-background-clip: text;
+    top: 0px;
+    left: 0px;
+    transition: 1s;
+  }
+  
+  .heading:hover:before {
+    top: 10px;
+    left: 10px;
+  }
+  
+  .heading:hover:after {
+    top: -10px;
+    left: -10px;
+  } 
+  
+.team {
+  padding: 60px 0;
+}
+.container {
+  font-family: "Rajdhani", sans-serif;
+  max-width: 1270px;
+  margin: auto;
+  padding: 0 15px;
+}
+.teamgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 25px;
+}
+.itemTeamImgBox {
+  overflow: hidden;
+}
+.itemTeamImgBox img {
+  width: 100%;
+  display: block;
+  filter: grayscale(1);
+  transform: scale(1.1);
+  transition: all 1s ease;
+}
+.itemTeam:hover .itemTeamImgBox img {
+  filter: grayscale(0);
+  transform: scale(1);
+}
+.itemTeamText {
+  margin-top: 20px;
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  align-items: baseline;
+  text-transform: capitalize;
+  font-size: 25px;
+  font-weight: 600;
+}
+.itemTeamNumber {
+  display: inline-flex;
+  line-height: 1;
+  overflow: hidden;
+}
+.itemTeamNumber span {
+  position: relative;
+  transition: transform 1s ease;
+}
+.itemTeamNumber span::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  color: hsl(36, 100%, 50%);
+  height: 100%;
+  top: 0;
+}
+.itemTeamNumber span:nth-child(1)::before {
+  transform: translateY(100%);
+}
+.itemTeamNumber span:nth-child(2)::before {
+  transform: translateY(-100%);
+}
+.itemTeam:hover .itemTeamNumber span:nth-child(1) {
+  transform: translateY(-100%);
+}
+.itemTeam:hover .itemTeamNumber span:nth-child(2) {
+  transform: translateY(100%);
+}
+
+.itemTeamLine {
+  height: 1px;
+  background-color: hsl(0, 0%, 100%) !important;
+  flex-grow: 1;
+  margin: 0 7px;
+  transition: all 1s ease;
+}
+.itemTeam:hover .itemTeamLine {
+  flex-grow: 0;
+  background-color: hsl(36, 100%, 50%);
+}
+.itemTeamName {
+  transition: color 1s ease;
+}
+.itemTeam:hover .itemTeamName {
+  color: hsl(36, 100%, 50%);
+}
+.itemTeamHover {
+  margin-top: 10px;display: flex;justify-content: space-between;
+  overflow: hidden;
+}
+.itemTeamHover > *{
+    transform: translateY(100%);
+    transition: transform 1s ease;
+}
+.itemTeam:hover .itemTeamHover > *{
+    transform: translateY(0);
+    transition-delay: calc(0.3 * var(--i));
+}
+.itemTeamDesignation {
+  text-transform: capitalize;
+  font-size: 18px;padding-right: 15px;
+  color: hsl(0, 0%, 100%);
+}
+.itemTeamSocialLinks a{
+    display: inline-block;
+    margin: 0 4px;
+    padding: 4px;color: hsl(0, 0%, 100%);
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.itemTeamSocialLinks a:hover{
+    color: hsl(36, 100%, 50%);
+}
