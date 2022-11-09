@@ -27,8 +27,8 @@ export default function Home() {
 
     right.style.width = "75%";
     left.style.width = "25%";
-    headleft.style.fontSize='3rem';
     headright.style.fontSize='4rem';
+    headleft.style.fontSize='3rem';
     
   }
   return (

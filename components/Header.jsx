@@ -49,7 +49,7 @@ const Header = () => {
         */}
 
           <div className={styles.navItem}>
-            <div className={styles.navLink}>Team</div>
+            <div className={styles.navLink}>Teams</div>
           </div>
           {/* 
           <div className={styles.navItem}>
