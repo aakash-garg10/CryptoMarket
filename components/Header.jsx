@@ -3,6 +3,7 @@ import Search from "../assets/svg/search";
 import gstyles from "../styles/Glassmorphism.module.css";
 // import { ConnectButton } from 'web3uikit'
 import { useContext } from "react";
+import Link from "next/link";
 // import { CoinMarketContext } from '../context/context'
 
 const styles = {
@@ -31,40 +32,36 @@ const Header = () => {
 
       <div className={styles.headerWrapper}>
         <nav className={styles.nav}>
-          <div className={styles.navItem}>
-            <div className={styles.navLink}>Market</div>
-            <div className={styles.badge} />
-          </div>
+          <Link href="/marketPlace">
+            <div className={styles.navItem}>
+              <div className={styles.navLink}>Market</div>
+              <div className={styles.badge} />
+            </div>
+          </Link>
 
           {/* <div className={styles.navItem} onClick={getQuote}> */}
-          <div className={styles.navItem}>
-            <div className={styles.navLink}>Exchange</div>
-          </div>
+          <Link href="/exchangeCoin">
+            <div className={styles.navItem}>
+              <div className={styles.navLink}>Exchange</div>
+            </div>
+          </Link>
 
-          {/* <div className={styles.navItem}>
-            <div className={styles.navLink}>NFT</div>
-            <div className={styles.badge} />
-          </div>
+          <Link href="/team">
+            <div className={styles.navItem}>
+              <div className={styles.navLink}>Team</div>
+            </div>
+          </Link>
 
-        */}
-
-          <div className={styles.navItem}>
-            <div className={styles.navLink}>Team</div>
-          </div>
-          {/* 
-          <div className={styles.navItem}>
-            <div className={styles.navLink}>Products</div>
-            <div className={styles.badge} />
-          </div> */}
-
-          <div className={styles.navItem}>
-            <div className={styles.navLink}>Contact Us</div>
-          </div>
+          <Link href="/contactus">
+            <div className={styles.navItem}>
+              <div className={styles.navLink}>Contact Us</div>
+            </div>
+          </Link>
         </nav>
 
         <div className="flex items-center">
           {/* <ConnectButton /> */}
-          <div className={styles.inputContainer} >
+          <div className={styles.inputContainer}>
             <Search />
             <input className={styles.input} placeholder="Search" />
           </div>
