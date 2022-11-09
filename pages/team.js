@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Head from "next/head";
 import styles from "../styles/Team.module.css";
+import Header from "../components/Header";
 const team = () => {
   return (
     <>
@@ -13,6 +14,7 @@ const team = () => {
           referrerpolicy="no-referrer"
         />
       </Head>
+      <Header/>
       <div className={styles.wrapper}>
         <div className={styles.heading}>OUR TEAM</div>
       </div>
@@ -25,8 +27,8 @@ const team = () => {
                 <Image
                   src="/Aakash.jpg"
                   alt="Picture of the Developer"
-                  width={300}
-                  height={370}
+                  width={250}
+                  height={300}
                 />
               </div>
               <div className={styles.itemTeamText}>
@@ -61,8 +63,8 @@ const team = () => {
                 <Image
                   src="/anant.jpg"
                   alt="Picture of the Developer"
-                  width={300}
-                  height={370}
+                  width={250}
+                  height={300}
                 />
               </div>
               <div className={styles.itemTeamText}>
@@ -97,8 +99,8 @@ const team = () => {
                 <Image
                   src="/ankit.jpg"
                   alt="Picture of the Developer"
-                  width={300}
-                  height={370}
+                  width={250}
+                  height={300}
                 />
               </div>
               <div className={styles.itemTeamText}>
@@ -133,8 +135,8 @@ const team = () => {
                 <Image
                   src="/photo.webp"
                   alt="Picture of the Developer"
-                  width={300}
-                  height={370}
+                  width={250}
+                  height={300}
                 />
               </div>
               <div className={styles.itemTeamText}>
