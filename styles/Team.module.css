@@ -11,8 +11,9 @@
     top: 50%;
     transform: translate(-50%, -50%);
     display: block;
-    color: hsl(36, 100%, 50%);
-    font-size: 114px;
+    /* color: hsl(36, 100%, 50%); */
+    color: #f72585;
+    font-size: 100px;
     letter-spacing: 8px;
     cursor: pointer;
   }
@@ -64,7 +65,7 @@
   } 
   
 .team {
-  padding: 60px 0;
+  padding: 50px 0;
 }
 .container {
   font-family: "Rajdhani", sans-serif;
@@ -114,7 +115,8 @@
   position: absolute;
   left: 0;
   width: 100%;
-  color: hsl(36, 100%, 50%);
+  /* color: hsl(36, 100%, 50%); */
+  color: #ef6ba7;
   height: 100%;
   top: 0;
 }
@@ -140,13 +142,15 @@
 }
 .itemTeam:hover .itemTeamLine {
   flex-grow: 0;
-  background-color: hsl(36, 100%, 50%);
+  /* background-color: hsl(36, 100%, 50%); */
+  background-color: #ef6ba7;
 }
 .itemTeamName {
   transition: color 1s ease;
 }
 .itemTeam:hover .itemTeamName {
-  color: hsl(36, 100%, 50%);
+  /* color: hsl(36, 100%, 50%); */
+  color: #ef6ba7;
 }
 .itemTeamHover {
   margin-top: 10px;display: flex;justify-content: space-between;
@@ -162,6 +166,7 @@
 }
 .itemTeamDesignation {
   text-transform: capitalize;
+  font-weight: 500;
   font-size: 18px;padding-right: 15px;
   color: hsl(0, 0%, 100%);
 }
@@ -174,5 +179,6 @@
     transition: color 0.3s ease;
 }
 .itemTeamSocialLinks a:hover{
-    color: hsl(36, 100%, 50%);
+    /* color: hsl(36, 100%, 50%); */
+    color: #ef6ba7;
 }
