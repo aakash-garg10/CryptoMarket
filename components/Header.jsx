@@ -1,9 +1,12 @@
 import Image from "next/image";
 import Search from "../assets/svg/search";
 import gstyles from "../styles/Glassmorphism.module.css";
-// import { ConnectButton } from 'web3uikit'
+import { ConnectButton } from 'web3uikit'
 import { useContext } from "react";
 // import { CoinMarketContext } from '../context/context'
+import { useAccount, useConnect, useSignMessage, useDisconnect } from 'wagmi';
+import { InjectedConnector } from 'wagmi/connectors/injected';
+import axios from 'axios';
 
 const styles = {
   navLink: `text-white flex mx-[10px]`,
@@ -18,6 +21,34 @@ const styles = {
 };
 
 const Header = () => {
+
+  const { connectAsync } = useConnect();
+    const { disconnectAsync } = useDisconnect();
+    const { isConnected } = useAccount();
+    const { signMessageAsync } = useSignMessage();
+
+    const handleAuth = async () => {
+        //disconnects the web3 provider if it's already active
+        if (isConnected) {
+            await disconnectAsync();
+        }
+        // enabling the web3 provider metamask
+        const { account, chain } = await connectAsync({ connector: new InjectedConnector() });
+
+        const userData = { address: account, chain: chain.id, network: 'evm' };
+        // making a post request to our 'request-message' endpoint
+        const { data } = await axios.post('/api/auth/request-message', userData, {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+        const message = data.message;
+        // signing the received message via metamask
+        const signature = await signMessageAsync({ message });
+
+        console.log(signature)
+    };
+
   //   const { getQuote } = useContext(CoinMarketContext)
   return (
     <div className={`${styles.header} ${gstyles.glassdesign}`}>
@@ -63,7 +94,7 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center">
-          {/* <ConnectButton /> */}
+        <button onClick={() => handleAuth()}>Connect Wallet</button>
           <div className={styles.inputContainer} >
             <Search />
             <input className={styles.input} placeholder="Search" />
