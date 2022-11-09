@@ -91,7 +91,7 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center">
-          {/* <ConnectButton /> */}
+        <button onClick={() => handleAuth()}>Connect Wallet</button>
           <div className={styles.inputContainer} >
             <Search />
             <input className={styles.input} placeholder="Search" />
