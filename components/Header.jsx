@@ -38,7 +38,7 @@ const Header = () => {
 
           {/* <div className={styles.navItem} onClick={getQuote}> */}
           <div className={styles.navItem}>
-            <div className={styles.navLink}>Ex</div>
+            <div className={styles.navLink}>Exchange</div>
           </div>
 
           {/* <div className={styles.navItem}>
