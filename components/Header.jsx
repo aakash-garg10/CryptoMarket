@@ -52,11 +52,28 @@ const Header = () => {
             </div>
           </Link>
 
+<<<<<<< HEAD
           <Link href="/contactus">
             <div className={styles.navItem}>
               <div className={styles.navLink}>Contact Us</div>
             </div>
           </Link>
+=======
+        */}
+
+          <div className={styles.navItem}>
+            <div className={styles.navLink}>Teams</div>
+          </div>
+          {/* 
+          <div className={styles.navItem}>
+            <div className={styles.navLink}>Products</div>
+            <div className={styles.badge} />
+          </div> */}
+
+          <div className={styles.navItem}>
+            <div className={styles.navLink}>Contact Us</div>
+          </div>
+>>>>>>> 43fc75755abdd1e1a5c4cd5d0d1fd16071aef935
         </nav>
 
         <div className="flex items-center">
