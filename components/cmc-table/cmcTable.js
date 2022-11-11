@@ -27,6 +27,7 @@ const CMCtable = () => {
       console.log(e.message)
     }
   }, [getTopTenCoins])
+  console.log(coinData)
 
   return (
     <div className='text-white font-bold'>

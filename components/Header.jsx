@@ -18,9 +18,10 @@ const styles = {
   nav: `flex justify-center items-center gap-[20px]`,
   header: `bg-[#17171A] text-white h-20 flex gap-[100px] w-full p-[25px]; `,
   headerWrapper: `flex justify-center h-full max-w-screen-xl mx-auto px-4`,
-  inputContainer: `flex items-center justify-center p-2 rounded bg-[#ffffff40]`,
+  inputContainer: `flex items-center justify-center p-2 rounded bg-[#ffffff40] ml-5`,
   input: `bg-transparent outline-none text-white w-70 ml-3`,
   cursorPointer: `mr-5 cursor-pointer`,
+  connectBtn:`bg-white-500 color-cyan`
 };
 
 const Header = () => {
@@ -37,9 +38,7 @@ const Header = () => {
         }
 
         const { account, chain } = await connectAsync({ connector: new MetaMaskConnector() });
-
         const userData = { address: account, chain: chain.id, network: 'evm' };
-
         const { data } = await axios.post('/api/auth/request-message', userData, {
             headers: {
                 'Content-Type': 'application/json',
@@ -47,7 +46,6 @@ const Header = () => {
         });
 
         const message = data.message;
-
         const signature = await signMessageAsync({ message });
 
         // redirect user after success authentication to '/user' page

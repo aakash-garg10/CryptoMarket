@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Header from '../components/Header'
 import Trending from '../components/Trending'
+import CMCtable from '../components/cmc-table/CMCTable'
 
 const marketPlace = () => {
   return (
@@ -11,7 +12,7 @@ const marketPlace = () => {
     <div className="mt-10"></div>
     <Trending/>
     <div className="mt-20"></div>
-    {/* CoinTable */}
+    <CMCtable/>
    </div>
   )
 }
