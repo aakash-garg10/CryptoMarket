@@ -62,8 +62,9 @@ const Header = () => {
     <div className={`${styles.header} ${gstyles.glassdesign}`}>
       {/* <div className={styles.header}> */}
       <Image
-        alt="logoimage"
-        src="https://s2.coinmarketcap.com/static/cloud/img/coinmarketcap_white_1.svg"
+        alt="logoImage"
+        // src="https://s2.coinmarketcap.com/static/cloud/img/coinmarketcap_white_1.svg"
+        src="/logo.jpeg"
         width={220}
         height={220}
       />
