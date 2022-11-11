@@ -1,6 +1,6 @@
-import { createContext, useState, useEffect } from 'react'
-import { useMoralis } from 'react-moralis'
-import { useMoralisQuery } from 'react-moralis'
+import { createContext, useState, useEffect } from "react";
+import { useMoralis } from "react-moralis";
+import { useMoralisQuery } from "react-moralis";
 // import {
 //   dogeAbi,
 //   daiAbi,
@@ -12,7 +12,7 @@ import { useMoralisQuery } from 'react-moralis'
 //   usdcAddress,
 // } from '../lib/constants'
 
-export const CoinMarketContext = createContext()
+export const CoinMarketContext = createContext();
 
 export const CoinMarketProvider = ({ children }) => {
   // const { isAuthenticated, user, Moralis } = useMoralis()
@@ -140,13 +140,13 @@ export const CoinMarketProvider = ({ children }) => {
 
   const getTopTenCoins = async () => {
     try {
-      const res = await fetch('/api/getTopTen')
-      const data = await res.json()
-      return data.data.data
+      const res = await fetch("/api/getTopTen");
+      const data = await res.json();
+      return data.data.data;
     } catch (e) {
-      console.log(e.message)
+      console.log(e.message);
     }
-  }
+  };
 
   return (
     <CoinMarketContext.Provider
@@ -168,5 +168,5 @@ export const CoinMarketProvider = ({ children }) => {
     >
       {children}
     </CoinMarketContext.Provider>
-  )
-}
+  );
+};
