@@ -1,11 +1,11 @@
-import CMCpriceConverter from '../../components/priceConverter'
 
-import Header from '../../components/header'
+import Header from '../../components/Header'
 import solana from '../../assets/solana.png'
 import Usd from '../../assets/svg/usd'
 import { useEffect, useState } from 'react'
-import Graph from '../../components/graph'
-import Chat from '../../components/chat'
+// import CMCpriceConverter from '../../components/priceConverter'
+// import Graph from '../../components/graph'
+// import Chat from '../../components/chat'
 
 const styles = {
   activeTab: `p-1 px-2 mr-2 rounded-lg bg-[#171924]`,
@@ -64,7 +64,7 @@ const Currencies = () => {
               </div>
             </div>
             <br />
-            <Graph />
+            {/* <Graph /> */}
             <br />
             <div className={styles.flexBetweenCenter}>
               <div className='flex'>
@@ -84,7 +84,7 @@ const Currencies = () => {
             </div>
             <br />
             <br />
-            <CMCpriceConverter
+            {/* <CMCpriceConverter
               from={coinName}
               fromSymbol={coinSymbol}
               fromLogo={solana}
@@ -92,11 +92,11 @@ const Currencies = () => {
               price={price}
               to='United States Dollars'
               toSymbol='USD'
-            />
+            /> */}
           </div>
 
           <div className='pt-10 ml-5'>
-            <Chat />
+            {/* <Chat /> */}
           </div>
         </div>
       </main>
