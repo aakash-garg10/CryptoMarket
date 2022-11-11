@@ -10,6 +10,7 @@ const CMCtable = () => {
 
   useEffect(() => {
     setData()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const setData = useCallback(async () => {
@@ -19,7 +20,7 @@ const CMCtable = () => {
 
       for (let i = 0; i < apiResponse.length; i++) {
         const element = apiResponse[i]
-        if (element.cmc_rank <= 10) filteredResponse.push(element)
+        if (element.cmc_rank <= 15) filteredResponse.push(element)
       }
 
       setCoinData(filteredResponse)

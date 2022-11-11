@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Header from '../components/Header'
 import Trending from '../components/Trending'
-import CMCtable from '../components/cmc-table/CMCTable'
+import CMCtable from '../components/cmc-table/cmcTable'
 
 const marketPlace = () => {
   return (
