@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
-import CoinDetails from "../../components/coinDetails"
-import Header from "../../components/header"
+// import CoinDetails from "../../components/coinDetails"
+import Header from "../../components/Header"
 
 const Price = () => {
     const [coinName, setCoinName] = useState('')
@@ -22,7 +22,7 @@ const Price = () => {
 
     return <div>
         <Header />
-        <CoinDetails coinName={coinName} price={price} coinSymbol={coinSymbol} />
+        {/* <CoinDetails coinName={coinName} price={price} coinSymbol={coinSymbol} /> */}
     </div>
 }
 
