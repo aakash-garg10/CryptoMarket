@@ -16,7 +16,7 @@ const styles = {
 }
 
 const Trending = () => {
-    const [checked, setChecked] = useState(false)
+    const [checked, setChecked] = useState(true)
 
     const trendingData = [
         {
@@ -56,16 +56,23 @@ const Trending = () => {
             <br />
             <div className="flex">
                 <p>The global crypto market cap is $1.74T, a &nbsp; </p>
-                <span> <Rate isIncrement={true} rate='0.53%' /> </span>
-                <p> &nbsp; decrease over the last day. <span className="underline">Read More</span> </p>
+                <span> <Rate isIncrement={true} rate='-0.53' /> </span>
+                <p> &nbsp; decrease over the last day. 
+                    {/* <span className="underline">Read More</span> */}
+                     </p>
             </div>
             <br />
-
-            <div className={styles.flexCenter}>
+            {checked ? (<div className={styles.flexCenter}>
                 <TrendingCard title='Trending' icon={fire} trendingData={trendingData} />
                 <TrendingCard title='Biggest Gainers' icon={gainers} trendingData={trendingData} />
                 <TrendingCard title='Recently Added' icon={recent} trendingData={trendingData} />
-            </div>
+            </div>)
+            :<></>}
+            {/* <div className={styles.flexCenter}>
+                <TrendingCard title='Trending' icon={fire} trendingData={trendingData} />
+                <TrendingCard title='Biggest Gainers' icon={gainers} trendingData={trendingData} />
+                <TrendingCard title='Recently Added' icon={recent} trendingData={trendingData} />
+            </div> */}
         </div>
     </div>
 }

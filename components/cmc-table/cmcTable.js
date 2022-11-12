@@ -20,7 +20,7 @@ const CMCtable = () => {
 
       for (let i = 0; i < apiResponse.length; i++) {
         const element = apiResponse[i]
-        if (element.cmc_rank <= 15) filteredResponse.push(element)
+        if (element.cmc_rank <= 99) filteredResponse.push(element)
       }
 
       setCoinData(filteredResponse)
@@ -49,6 +49,7 @@ const CMCtable = () => {
                   hRate={coin.quote.USD.percent_change_24h}
                   dRate={coin.quote.USD.percent_change_7d}
                   hRateIsIncrement={true}
+                  dRateIsIncrement={false}
                   price={coin.quote.USD.price}
                   marketCapValue={coin.quote.USD.market_cap}
                   volumeCryptoValue={coin.quote.USD.volume_24h}
