@@ -86,10 +86,10 @@ const CMCtableRow = ({
           <p>${formatNum(price)}</p>
         </td>
         <td>
-          <Rate isIncrement={hRateIsIncrement} rate={`${formatNum(hRate)}%`} />
+          <Rate isIncrement={hRateIsIncrement} rate={`${formatNum(hRate)}`} />
         </td>
         <td>
-          <Rate isIncrement={dRateIsIncrement} rate={`${formatNum(dRate)}%`} />
+          <Rate isIncrement={dRateIsIncrement} rate={`${formatNum(dRate)}`} />
         </td>
 
         <td>
@@ -117,9 +117,7 @@ const CMCtableRow = ({
           <Image src={getRandomGraph()} width={150} height={60} alt="" />
         </td>
 
-        {/* <td>
-          <More />
-        </td> */}
+        
       </tr>
     </tbody>
   );

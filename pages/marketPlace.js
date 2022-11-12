@@ -11,7 +11,7 @@ const marketPlace = () => {
     <Header />
     <div className="mt-10"></div>
     <Trending/>
-    <div className="mt-20"></div>
+    <div className="mt-16"></div>
     <CMCtable/>
    </div>
   )
