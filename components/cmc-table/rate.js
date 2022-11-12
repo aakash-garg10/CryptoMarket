@@ -10,11 +10,9 @@ const styles = {
 }
 
 const Rate = ({ isIncrement, rate }) => {
-    console.log(isIncrement)
-    console.log(rate)
+    // console.log(rate)
     return <div className={styles.rate}>
         {(rate>0) ? <ChevronUp fill="#17C784" /> : <ChevronDown fill="#EA3943" />}
-        {/* <p className={(rate>0) ? styles.green : styles.red}>{rate}%</p> */}
         <p className={(rate>0) ? styles.green : styles.red}>{rate>0 ? rate: (rate=-rate)}%</p>
     </div>
 }

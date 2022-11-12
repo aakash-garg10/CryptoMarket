@@ -25,21 +25,21 @@ const Trending = () => {
             name: "Bitcoin",
             icon: btc,
             isIncrement: true,
-            rate: "2.34%"
+            rate: "-2.34"
         }, {
             number: 2,
             symbol: "USDT",
             name: "Tether",
             icon: usdt,
             isIncrement: false,
-            rate: "9.32%"
+            rate: "-9.32"
         }, {
             number: 3,
             symbol: "mBTC",
             name: "Mini Bitcoin",
             icon: btc,
             isIncrement: true,
-            rate: "1.94%"
+            rate: "1.94"
         },
     ]
 
