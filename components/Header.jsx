@@ -21,7 +21,7 @@ const styles = {
   inputContainer: `flex items-center justify-center p-2 rounded bg-[#ffffff40] ml-5`,
   input: `bg-transparent outline-none text-white w-70 ml-3`,
   cursorPointer: `mr-5 cursor-pointer`,
-  connectBtn:`bg-white-500 color-cyan`
+  connectBtn:`bg-white-500 color-blue`
 };
 
 const Header = () => {
