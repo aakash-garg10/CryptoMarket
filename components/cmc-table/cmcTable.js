@@ -10,7 +10,7 @@ const CMCtable = () => {
 
   useEffect(() => {
     setData()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [])
 
   const setData = useCallback(async () => {
