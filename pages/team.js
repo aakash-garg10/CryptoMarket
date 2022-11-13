@@ -133,7 +133,7 @@ const team = () => {
             <div className={styles.itemTeam}>
               <div className={styles.itemTeamImgBox}>
                 <Image
-                  src="/photo.webp"
+                  src="/divyansh.jpg"
                   alt="Picture of the Developer"
                   width={250}
                   height={300}
@@ -145,7 +145,7 @@ const team = () => {
                   <span data-text="4">4</span>
                 </div>
                 <div className={styles.itemTeamLine}></div>
-                <div className={styles.itemTeamName}>Divyansh Rah</div>
+                <div className={styles.itemTeamName}>Divyansh Raj</div>
               </div>
               <div className={styles.itemTeamHover}>
                 <div className={styles.itemTeamDesignation}> Developer</div>

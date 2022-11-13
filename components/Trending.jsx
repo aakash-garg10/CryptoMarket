@@ -68,11 +68,7 @@ const Trending = () => {
                 <TrendingCard title='Recently Added' icon={recent} trendingData={trendingData} />
             </div>)
             :<></>}
-            {/* <div className={styles.flexCenter}>
-                <TrendingCard title='Trending' icon={fire} trendingData={trendingData} />
-                <TrendingCard title='Biggest Gainers' icon={gainers} trendingData={trendingData} />
-                <TrendingCard title='Recently Added' icon={recent} trendingData={trendingData} />
-            </div> */}
+           
         </div>
     </div>
 }
