@@ -26,36 +26,7 @@ const styles = {
 
 const Header = () => {
 
-    const { connectAsync } = useConnect();
-    const { disconnectAsync } = useDisconnect();
-    const { isConnected } = useAccount();
-    const { signMessageAsync } = useSignMessage();
-    const { push } = useRouter();
-
-    const handleAuth = async () => {
-        if (isConnected) {
-            await disconnectAsync();
-        }
-
-        const { account, chain } = await connectAsync({ connector: new MetaMaskConnector() });
-        const userData = { address: account, chain: chain.id, network: 'evm' };
-        const { data } = await axios.post('/api/auth/request-message', userData, {
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
-
-        const message = data.message;
-        const signature = await signMessageAsync({ message });
-
-        // redirect user after success authentication to '/user' page
-        const { url } = await signIn('credentials', { message, signature, redirect: false, callbackUrl: '/user' });
-        /**
-         * instead of using signIn(..., redirect: "/user")
-         * we get the url from callback and push it to the router to avoid page refreshing
-         */
-        push(url);
-    };
+    
 
   //   const { getQuote } = useContext(CoinMarketContext)
   return (
@@ -64,7 +35,7 @@ const Header = () => {
       <Image
         alt="logoImage"
         // src="https://s2.coinmarketcap.com/static/cloud/img/coinmarketcap_white_1.svg"
-        src="/logo.jpeg"
+        src="/1.png"
         width={220}
         height={220}
       />
