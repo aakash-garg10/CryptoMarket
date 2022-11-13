@@ -34,10 +34,9 @@ const Header = () => {
       {/* <div className={styles.header}> */}
       <Image
         alt="logoImage"
-        // src="https://s2.coinmarketcap.com/static/cloud/img/coinmarketcap_white_1.svg"
         src="/1.png"
-        width={220}
-        height={220}
+        width={320}
+        height={420}
       />
 
       <div className={styles.headerWrapper}>

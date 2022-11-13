@@ -35,7 +35,12 @@ export default function Home() {
     <>
       <div className={`${styles.container}`}>
         <div className={styles.logoSection}>
-          <h2 className={styles.logoHeading}>CRYPTO EXCHANGER</h2>
+          <h2 className={styles.logoHeading}><Image
+        alt="logoImage"
+        src="/1.png"
+        width={320}
+        height={100}
+      /></h2>
         </div>
         <div
           className={`${styles.split} ${styles.left}`}
