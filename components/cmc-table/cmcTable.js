@@ -1,39 +1,38 @@
-import { useContext, useEffect, useState, useCallback } from 'react'
-import btc from '../../assets/btc.png'
-import { CoinMarketContext } from '../../context/context'
-import CMCtableHeader from './cmcTableHeader'
-import CMCtableRow from './cmcTableRow'
+import { useContext, useEffect, useState, useCallback } from "react";
+import btc from "../../assets/btc.png";
+import { CoinMarketContext } from "../../context/context";
+import CMCtableHeader from "./cmcTableHeader";
+import CMCtableRow from "./cmcTableRow";
 
 const CMCtable = () => {
-  let { getTopTenCoins } = useContext(CoinMarketContext)
-  let [coinData, setCoinData] = useState(null)
+  // console.log(CoinMarketContext);
+  let { getTopTenCoins } = useContext(CoinMarketContext);
+  let [coinData, setCoinData] = useState(null);
 
   useEffect(() => {
-    setData()
-    
-  }, [])
+    setData();
+  }, []);
 
   const setData = useCallback(async () => {
     try {
-      let apiResponse = await getTopTenCoins()
-      let filteredResponse = []
-
+      let apiResponse = await getTopTenCoins();
+      let filteredResponse = [];
       for (let i = 0; i < apiResponse.length; i++) {
-        const element = apiResponse[i]
-        if (element.cmc_rank <= 99) filteredResponse.push(element)
+        const element = apiResponse[i];
+        if (element.cmc_rank <= 99) filteredResponse.push(element);
       }
-
-      setCoinData(filteredResponse)
-    } catch (e) {
-      console.log(e.message)
+      setCoinData(filteredResponse);
+    } 
+    catch (e) {
+      console.log(e.message);
     }
-  }, [getTopTenCoins])
-  console.log(coinData)
+  }, [getTopTenCoins]);
+  // console.log(coinData);
 
   return (
-    <div className='text-white font-bold'>
-      <div className='mx-auto max-w-screen-2xl'>
-        <table className='w-full'>
+    <div className="text-white font-bold">
+      <div className="mx-auto max-w-screen-2xl">
+        <table className="w-full">
           <CMCtableHeader />
 
           {coinData && coinData ? (
@@ -56,7 +55,7 @@ const CMCtable = () => {
                   volumeValue={coin.total_supply}
                   circulatingSupply={coin.circulating_supply}
                 />
-              )
+              );
             })
           ) : (
             <></>
@@ -64,7 +63,7 @@ const CMCtable = () => {
         </table>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CMCtable
+export default CMCtable;

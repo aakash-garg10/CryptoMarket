@@ -4,8 +4,6 @@ import gstyles from "../styles/Glassmorphism.module.css";
 import { useContext } from "react";
 import Link from "next/link";
 // import { CoinMarketContext } from '../context/context'
-import { MetaMaskConnector } from "wagmi/connectors/metaMask";
-import { signIn } from "next-auth/react";
 
 const styles = {
   navLink: `text-white flex mx-[10px]`,
