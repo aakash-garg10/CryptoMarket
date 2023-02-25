@@ -16,7 +16,7 @@ const marketPlace = () => {
    </div>
   )
 }
-
+//random tezt
 export default marketPlace
 
 
