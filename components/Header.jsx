@@ -1,15 +1,11 @@
 import Image from "next/image";
 import Search from "../assets/svg/search";
 import gstyles from "../styles/Glassmorphism.module.css";
-import { ConnectButton } from 'web3uikit'
 import { useContext } from "react";
 import Link from "next/link";
 // import { CoinMarketContext } from '../context/context'
-import { MetaMaskConnector } from 'wagmi/connectors/metaMask';
-import { signIn } from 'next-auth/react';
-import { useAccount, useConnect, useSignMessage, useDisconnect } from 'wagmi';
-import { useRouter } from 'next/router';
-import axios from 'axios';
+import { MetaMaskConnector } from "wagmi/connectors/metaMask";
+import { signIn } from "next-auth/react";
 
 const styles = {
   navLink: `text-white flex mx-[10px]`,
@@ -21,23 +17,15 @@ const styles = {
   inputContainer: `flex items-center justify-center p-2 rounded bg-[#ffffff40] ml-5`,
   input: `bg-transparent outline-none text-white w-70 ml-3`,
   cursorPointer: `mr-5 cursor-pointer`,
-  connectBtn:`bg-white-500 color-blue`
+  connectBtn: `bg-white-500 color-blue`,
 };
 
 const Header = () => {
-
-    
-
   //   const { getQuote } = useContext(CoinMarketContext)
   return (
     <div className={`${styles.header} ${gstyles.glassdesign}`}>
       {/* <div className={styles.header}> */}
-      <Image
-        alt="logoImage"
-        src="/1.png"
-        width={320}
-        height={420}
-      />
+      <Image alt="logoImage" src="/1.png" width={320} height={420} />
 
       <div className={styles.headerWrapper}>
         <nav className={styles.nav}>
@@ -68,13 +56,13 @@ const Header = () => {
           </Link>
         </nav>
 
-        <div className="flex items-center">
+        {/* <div className="flex items-center">
         <button onClick={() => handleAuth()}>Connect Wallet</button>
           <div className={styles.inputContainer} >
             <Search />
             <input className={styles.input} placeholder="Search" />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
