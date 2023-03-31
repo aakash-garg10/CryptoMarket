@@ -21,7 +21,7 @@ const styles = {
 const Header = () => {
   //   const { getQuote } = useContext(CoinMarketContext)
   return (
-    <div className={`${styles.header} ${gstyles.glassdesign}`}>
+    <div className={`left-0 top-0 ${styles.header} ${gstyles.glassdesign}`}>
       {/* <div className={styles.header}> */}
       <Image alt="logoImage" src="/1.png" width={320} height={420} />
 

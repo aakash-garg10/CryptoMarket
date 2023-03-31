@@ -14,6 +14,7 @@ import toast, { Toaster } from 'react-hot-toast'
 import { DEFAULT_VALUE, ETH } from '../utils/SupportedCoins'
 import { toEth, toWei } from '../utils/ether-utils'
 import { useAccount } from 'wagmi'
+import gstyles from '../styles/Glassmorphism.module.css'
 
 const SwapComponent = () => {
   const [srcToken, setSrcToken] = useState(ETH)
@@ -99,21 +100,21 @@ const SwapComponent = () => {
   }, [outputValue, srcToken])
 
   return (
-    <div className='bg-zinc-900 w-[35%] p-4 px-6 rounded-xl'>
+    <div className={`w-[35%] p-4 text-white  px-6 rounded-xl border border-[#ffffff26]  bg-[#ffffff26] shadow-[0px_8px_32px_0px_#1f26875e]`}>
       <div className='flex items-center justify-between py-4 px-1'>
-        <p>Swap</p>
-        <CogIcon className='h-6' />
+        <p className='text-white text-3xl'>SWAP COIN</p>
+        {/* <CogIcon className='h-6' /> */}
       </div>
-      <div className='relative bg-[#212429] p-4 py-6 rounded-xl mb-2 border-[2px] border-transparent hover:border-zinc-600'>
+      <div className='relative p-4 py-6 rounded-xl mb-2 hover:border-zinc-600 border border-[#ffffff26]  bg-[#ffffff26] shadow-[0px_8px_32px_0px_#1f26875e]'>
         {srcTokenComp}
 
         <ArrowSmDownIcon
-          className='absolute left-1/2 -translate-x-1/2 -bottom-6 h-10 p-1 bg-[#212429] border-4 border-zinc-900 text-zinc-300 rounded-xl cursor-pointer hover:scale-110'
+          className='absolute left-1/2 -translate-x-1/2 -bottom-6 h-10 p-1 text-zinc-300 rounded-xl cursor-pointer hover:scale-110 border border-[#ffffff26]  bg-[#ffffff26] shadow-[0px_8px_32px_0px_#1f26875e]'
           onClick={handleReverseExchange}
         />
       </div>
 
-      <div className='bg-[#212429] p-4 py-6 rounded-xl mt-2 border-[2px] border-transparent hover:border-zinc-600'>
+      <div className='p-4 py-6 rounded-xl mt-2 hover:border-zinc-600 border border-[#ffffff26]  bg-[#ffffff26] shadow-[0px_8px_32px_0px_#1f26875e]'>
         {destTokenComp}
       </div>
 
@@ -176,8 +177,8 @@ const SwapComponent = () => {
     let className = 'p-4 w-full my-2 rounded-xl'
     className +=
       swapBtnText === ENTER_AMOUNT || swapBtnText === CONNECT_WALLET
-        ? ' text-zinc-400 bg-zinc-800 pointer-events-none'
-        : ' bg-blue-700'
+        ? ' border border-[#ffffff26]  bg-[#ffffff26] shadow-[0px_8px_32px_0px_#1f26875e] text-white pointer-events-none'
+        : ' bg-[#4D067D]'
     className += swapBtnText === INCREASE_ALLOWANCE ? ' bg-yellow-600' : ''
     return className
   }
