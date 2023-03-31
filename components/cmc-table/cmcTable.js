@@ -22,15 +22,25 @@ const CMCtable = () => {
         if (element.cmc_rank <= 99) filteredResponse.push(element);
       }
       setCoinData(filteredResponse);
-    } 
-    catch (e) {
+    } catch (e) {
       console.log(e.message);
     }
   }, [getTopTenCoins]);
   // console.log(coinData);
 
   return (
-    <div className="text-white font-bold">
+    <div className="text-white font-bold" style={{ height: "100%" }}>
+      {/* <iframe
+        src="https://in.widgets.investing.com/top-cryptocurrencies?theme=lightTheme&hideTitle=true&roundedCorners=true"
+        width="100%"
+        // height="100%"
+        frameborder="0"
+        allowtransparency="true"
+        marginwidth="0"
+        marginheight="0"
+        style={{ height: "80vh" }}
+      ></iframe> */}
+
       <div className="mx-auto max-w-screen-2xl">
         <table className="w-full">
           <CMCtableHeader />

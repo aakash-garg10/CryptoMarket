@@ -46,7 +46,7 @@ export default function Home() {
           className={`${styles.split} ${styles.left}`}
           onMouseEnter={leftchangeBackground}
         >
-          <h1>MarketPlace</h1>
+          <h1>Market-Place</h1>
           <Link href="/marketPlace">
             <button className={styles.btn}>Visit Now</button>
           </Link>
